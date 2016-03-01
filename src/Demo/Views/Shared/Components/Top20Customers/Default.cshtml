@@ -1,0 +1,16 @@
+﻿@using System.Threading.Tasks
+@model IEnumerable<Customer>
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var customer in Model)
+        {
+            <li>
+                [@customer.Id] @customer.Firstname @customer.Lastname<br/>
+                @customer.Address, @customer.City<br />
+                @customer.Email, @customer.Phone
+            </li>
+        }
+    </ul>
+}
